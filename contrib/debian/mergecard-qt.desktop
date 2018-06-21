@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=MergeCard
+Comment=MergeCard P2P Cryptocurrency
+Comment[fr]=MergeCard, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=MergeCard, eşten eşe kriptografik sanal para birimi
+Exec=mergecard-qt %u
+Terminal=false
+Type=Application
+Icon=mergecard128
+MimeType=x-scheme-handler/mergecard;
+Categories=Office;Finance;

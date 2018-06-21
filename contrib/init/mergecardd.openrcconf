@@ -1,0 +1,26 @@
+# /etc/conf.d/mergecardd: config file for /etc/init.d/mergecardd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/mergecard/mergecard.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/mergecardd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/mergecardd.pid"
+
+# Where to write mergecardd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/mergecardd"
+
+# User and group to own mergecardd process
+#BITCOIND_USER="mergecard"
+#BITCOIND_GROUP="mergecard"
+
+# Path to mergecardd executable
+#BITCOIND_BIN="/usr/bin/mergecardd"
+
+# Nice value to run mergecardd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

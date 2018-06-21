@@ -1,0 +1,26 @@
+[Unit]
+Description=MergeCard's distributed currency daemon
+After=network.target
+
+[Service]
+User=mergecard
+Group=mergecard
+
+Type=forking
+PIDFile=/var/lib/mergecardd/mergecardd.pid
+
+ExecStart=/usr/bin/mergecardd -daemon -pid=/var/lib/mergecardd/mergecardd.pid \
+          -conf=/etc/mergecard/mergecard.conf -datadir=/var/lib/mergecardd
+
+ExecStop=-/usr/bin/mergecard-cli -conf=/etc/mergecard/mergecard.conf \
+         -datadir=/var/lib/mergecardd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
